@@ -1,0 +1,2 @@
+# Keep the `dist` folder for easy bundling, but ignore all bundled files
+x86_64-win32
