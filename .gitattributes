@@ -27,16 +27,14 @@
 *.texture_profiles linguist-language=JSON5
 *.tilemap linguist-language=JSON5
 *.tilesource linguist-language=JSON5
-
 # Defold JSON Files
 *.buffer linguist-language=JSON
-
 # Defold GLSL Shaders
 *.fp linguist-language=GLSL
 *.vp linguist-language=GLSL
-
 # Defold Lua Files
 *.editor_script linguist-language=Lua
 *.render_script linguist-language=Lua
 *.script linguist-language=Lua
 *.gui_script linguist-language=Lua
+snake.png filter=lfs diff=lfs merge=lfs -text
