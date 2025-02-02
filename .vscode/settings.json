@@ -1,12 +1,5 @@
 {
   "git.branchProtection": [],
-  "Lua.diagnostics.globals": [
-    "tilemap",
-    "msg",
-    "socket",
-    "hash"
-  ],
-  "Lua.diagnostics.disable": [
-    "lowercase-global"
-  ]
+  "Lua.diagnostics.globals": ["tilemap", "msg", "socket", "hash"],
+  "Lua.diagnostics.disable": ["lowercase-global"]
 }
