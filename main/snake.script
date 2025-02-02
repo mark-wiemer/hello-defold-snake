@@ -1,3 +1,5 @@
+local m = require "main.model"
+
 local function put_food(self)
 	self.food = {x = math.random(2, 47), y = math.random(2, 47)}
 	tilemap.set_tile("#grid", "layer1", self.food.x, self.food.y, 3)
@@ -23,6 +25,7 @@ function init(self)
 end
 
 function update(self, dt)
+	m.tick({})
 	self.t = self.t + dt
 	if self.t >= 1.0 / self.speed and self.alive then
 		local newdir = table.remove(self.dirqueue, 1)
