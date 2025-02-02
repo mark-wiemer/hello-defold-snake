@@ -25,7 +25,7 @@ function M.new_state(size)
 end
 
 -- todo make sure food doesn't appear on snake
-function move_food(state)
+local function move_food(state)
 	state.food = { x = math.random(2, state.size - 1), y = math.random(2, state.size - 1) }
 end
 
