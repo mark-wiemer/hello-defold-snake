@@ -29,6 +29,11 @@ function update(self, dt)
 	end
 end
 
+local function toggle_profiler(self)
+	self.enable_ui = not self.enable_ui
+	profiler.enable_ui(self.enable_ui)
+end
+
 function on_input(self, action_id, action)
 	if action_id == hash("up") and action.pressed then
 		table.insert(self.state.dirqueue, { x = 0, y = 1 })
@@ -38,5 +43,8 @@ function on_input(self, action_id, action)
 		table.insert(self.state.dirqueue, { x = -1, y = 0 })
 	elseif action_id == hash("right") and action.pressed then
 		table.insert(self.state.dirqueue, { x = 1, y = 0 })
+	elseif action_id == hash("profiler") and action.pressed then
+		-- todo only include this in debug builds
+		toggle_profiler(self)
 	end
 end
